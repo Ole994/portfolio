@@ -226,9 +226,39 @@ ul {
     margin: 40px;
 }
 
+.my-projects-text{
+    display: flex;
+    justify-content: center;
+}
+
+.h2-my-projects{
+    background-color: rgb(58, 86, 109);
+}
+
+.h3-my-projects{
+background-color: none;
+}
 
 
-.social-media-icons {}
+.rainy-days-frontpage-div{
+    display: flex;
+    justify-content: center;
+}
+.rainy-days-img-frontpage{
+    width: 200px;
+}
+
+.div-rainy-days-text-frontpage{
+    display: flex;
+    justify-content: center;
+}
+
+.rainy-days-p-frontpage{
+    width: 200px;
+}
+
+
+/* .social-media-icons {} */
 
 /*Desktop big*/
 @media (min-width: 1200px) {
