@@ -216,9 +216,17 @@ ul {
 /*P about me text*/ 
 .p-about-me-homepage {
     margin-top: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 15px;
     margin-left: 40px;
     margin-right: 20px;
+    color: wheat;
+}
+
+.read-more-button{
+    color: white;
+    background-color: rgb(94, 185, 94);
+    border-radius: 15px;
+margin-bottom: 60px;
 }
 /*social media*/ 
 .social-media-links {
@@ -376,6 +384,7 @@ width: 100%;
 
 .div-around-the-three-projects{
     display: flex;
+    flex-direction: row;
 }
 
 }
