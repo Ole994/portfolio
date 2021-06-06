@@ -1,58 +1,113 @@
-// const queryString = window.location.search;
-// const id = new URLSearchParams(queryString).get('id');
-// const spinner = document.querySelector(".lds-spinner");
-// const viewMoreButton = document.querySelector(".single-button-view-more");
-// let postOffset = 10;
-// const loading = document.querySelector(".loading");
-// console.log(id)
+const url = "https://olekorvald.no/wp-json/wp/v2/posts?_embed=wp:featuredmedia&per_page=3"
 
+// HTML Dom elementer. 
+const postFrontpage = document.querySelector(".post-frontpage");
+const carouselButtonPrevious = document.querySelector(".prev-button");
+const carouselButtonNext = document.querySelector(".next-button");
+const loading = document.querySelector(".loading");
 
-// /*henter ut data*/
-// const url = "https://olekorvald.no/wp-json/wp/v2/posts?_embed=wp:featuredmedia&per_page=2"
+// Dette er tilstand som vi bruker. F.eks. lagrer vi alle postene i posts, og 
+// bruker disse til å endre de på nytt når vi trenger det. 
 
-// const postContent = document.querySelector(".posts-content-Posts-Page")
-// fetch(url, {
-//   "method": "GET"
-// })
-//   .then(response => response.json())
-//   .then(data => template(data))
+let posts = [];
+let activeStart = 0;
+let numberOfItems = 3;
+
+fetch(url, {
+  "method": "GET"
+})
+  .then(response => response.json())
+  .then(data => {
+    posts = data;
+    renderPosts(data);
+  })
 //   .finally(() => loading.style.display = "none");
 
-// const template = (posts) => {
-//   console.log(posts)
-//   for (post of posts) {
-//     console.log(post.title)
-//     let imageUrl = post._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
-//     let htmlString = `
-//     <div class"image-card-postsPage>
-//     <div class="post-title"><h2>${post.title.rendered}</h2></div>
-//     <div class="posts-image"> <a class="navbar-links" href="post.html?id=${post.id}"><img class= "img-cards-single-posts"src = "${imageUrl}"/></a>
-//     </div>
-//      ${post.excerpt.rendered}
-//     </div>
-//             `
-//     postContent.innerHTML += htmlString;
+/* Sjekker with på vindu for å tilpasse antall elementer i karusellen*/
+// Vi kan bruke window.innerWidth for å sjekke hvor vid skjermen er
+// og sette antall elementer i karusell vi ønsker å vise.
+// Kan brukes sammen med resize-event.
+
+
+// window.addEventListener("resize", () => {
+//   if (screen.width < 800) {
+//     numberOfItems = 2;
 //   }
+
+//   else if (screen.width < 1100) {
+//     numberOfItems = 1;
+//   }
+//   else {
+
+//     numberOfItems = 2;
+//   }
+//     // Endre antall kort vi viser ved å endre numberOfItems. 
+
+
+//   renderPosts(posts);
+// });
+
+// if (screen.width < 800) {
+//     numberOfItems = 0;
 // }
-// //Først lage en variabel, i dette tilfelle øverst på siden
-// //Denne variabelen innholder antall poster som er hentet så langt
-// //Deretter lages det en addEventListner funksjon son reagerer når knappen blir trykket på.
-// //En ser at i dette tilfelle postOffset under er satt til 2
-// //som vil si at den legger til 2 poster på siden.
-// //$postOffset den forteller til wordpress at den skal ignorere postene som alt er hentet
-// //Så skjer et fetchCall som utfører et httpCall (restcall)
-// //som får tilbake poster fra wordpress 
-// //de postene blir lagt til i dommen gjennom templaten som ble laget.
+// else if (screen.width < 1100) {
+//     numberOfItems = 2;
+// }
+
+/*skriver dom element for karusellen */
+const renderPosts = (posts) => {
+  console.log(posts)
+
+  // tømmer DOM-treet for elementer, siden det skal bygges 
+  // på nytt med nye data. 
+
+  postFrontpage.innerHTML = "";
+
+  /*entries får index og verdi*/
+
+  // index = teller opp indeks til postene som iterer igjennom
+  // F.eks. 10 poster -> [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+  // post = faktisk post fra Wordpress
+  // posts.entries() = gir oss par av index og post. [0, post1], [1, post2].... [9, post10]
+
+  for (let [index, post] of posts.entries()) {
+
+    // showCard er true dersom index er større eller lik activeStart og
+    // og mindre eller lik activeCarouselEnd. 
+    // Dette definerer hvilket intervall som ønsker å vise aktive poster i karusellen.
 
 
-// viewMoreButton.addEventListener("click", () => {
+    // Hvis man er innenfor intervallet start-index og start-index + antall kort som skal vises:
+    // så vis kort (ved å ikke legge på hidden-klasse), ellers legg på "hidden"-klasse. 
 
-//   const url = `https://olekorvald.no/wp-json/wp/v2/posts?_embed=wp:featuredmedia&per_page=2&offset=${postOffset}`
-//   postOffset += 2
-//   fetch(url, {
-//     "method": "GET"
-//   })
-//     .then(response => response.json())
-//     .then(data => template(data))
+    const showCard = index >= activeStart && index <= (activeStart + numberOfItems);
+    let showCardClass = '';
+    if (!showCard) {
+      showCardClass = 'hidden'
+    }
+    /* Html*/
+    let imageUrl = post._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url;
+    let excerpt = post.excerpt.rendered;
 
-// })
+    let htmlString = `
+    <div class="image-card-homepage ${showCardClass}">
+        <div class="container-allH2Cards-frontPage">
+          <h2 class="h2-image-forntPage">${post.title.rendered}</h2>
+        </div>
+
+          <a class="navbar-links" href="post.html?id=${post.id}">
+            <img class= "img-card-url"src = "${imageUrl}"/>
+          </a>
+
+          <div class= "p-image-card-homepage">${post.excerpt.rendered}</div>
+              <div class="box-3">
+    </div>
+    
+    `
+    postFrontpage.innerHTML += htmlString;
+  }
+}
+
+
+

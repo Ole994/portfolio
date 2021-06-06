@@ -25,15 +25,15 @@ body {
     font-size: 18px;
 }
 
-
 /*header and navbar*/
 
 header {
-    margin: 20px 10px 0
+    margin: 20px 10px 0;
+    
 }
 
 .header-hamburger {
-    background-color: #303133;
+    /* background-color: #303133; */
 }
 
 .navbar-hamburger {
@@ -196,28 +196,31 @@ ul {
     padding: 0;
 }
 
-
+ 
+ /*Profile image*/ 
 .ole-prof-picture-homepage-flex {
 
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin-right: 10px;
+    
 }
 
 .profile-img-homepage {
-    width: 50%;
+    width: 100%;
     border-radius: 10px;
-    height: 30vh;
-    object-fit:cover
+    height: 40vh;
+    object-fit:cover;
 }
-
+/*P about me text*/ 
 .p-about-me-homepage {
     margin-top: 20px;
+    margin-bottom: 40px;
     margin-left: 40px;
+    margin-right: 20px;
 }
-
+/*social media*/ 
 .social-media-links {
     display: flex;
     flex-direction: row;
@@ -225,24 +228,30 @@ ul {
     height: 30px;
     margin: 40px;
 }
+/*project*/ 
+.h2-my-projects{
+    background-color: rgb(58, 86, 109);
+}
 
 .my-projects-text{
     display: flex;
     justify-content: center;
 }
 
-.h2-my-projects{
-    background-color: rgb(58, 86, 109);
-}
-
+/*prosjekt*/ 
 .h3-my-projects{
 background-color: none;
 }
 
-
-.rainy-days-frontpage-div{
+/*Reiny days*/ 
+.border-around-project-div{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    border-top: 2px solid rgb(97, 155, 97);
+    height: 400px;
+    text-align: center;
+   
+
 }
 .rainy-days-img-frontpage{
     width: 200px;
@@ -257,6 +266,35 @@ background-color: none;
     width: 200px;
 }
 
+/*Posts-homepage*/
+.hidden {
+    display: none !important;
+  }
+  
+  .post-frontpage {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+  }
+  
+  .image-card-homepage {
+    border: 2px solid rgb(155, 218, 186);
+    border-radius: 5px;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    box-shadow: rgba(230, 215, 215, 0.25) 0px 54px 55px,
+                rgba(165, 154, 154, 0.12) 0px -12px 30px,
+                rgba(255, 255, 255, 0.12) 0px 4px 6px,
+                rgba(255, 255, 255, 0.17) 0px 12px 13px,
+                rgba(243, 243, 243, 0.09) 0px -3px 5px;
+  }
+  .p-image-card-homepage {
+    text-align: left;
+    font-size: 20px;
+    padding: 30px;
+  }
 
 /* .social-media-icons {} */
 
@@ -282,7 +320,7 @@ background-color: none;
         height: 40vh;
 }
 
-
+}
 
 @media (min-width: 994px) {
 
@@ -293,8 +331,6 @@ background-color: none;
     .logo-picture {
         width: 300px;
     }
-
-    
 
     .p-about-me-homepage {
         margin-top: 20px;
@@ -311,5 +347,49 @@ background-color: none;
         margin-right: 10px;
         margin-left: 20px;
     }
+    .post-frontpage {
+        display: flex;
+        text-align: center;
+        flex-direction: row;
+        margin-left: 2px;
+        margin-right: 2px;
+      }
+      .nav-column{
+          display: flex;
+          flex-direction: column;
+      }
+
+      /*Reiny days*/ 
+.border-around-project-div{
+    flex-wrap: ;
+width: 100%;
+    height: 400px;
+    text-align: center;
+    border-top: none;
 }
+
+.my-projects-text{
+   
+    justify-content: center;
+    
 }
+
+.div-around-the-three-projects{
+    display: flex;
+}
+
+}
+
+
+
+
+
+  
+  
+  
+ 
+  
+  
+  
+  
+  
