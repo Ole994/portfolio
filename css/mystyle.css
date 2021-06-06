@@ -8,7 +8,7 @@ body {
     text-decoration: none;
     font-family: "Amiri", serif;
     font-size: 16px;
-    background-image: url(/pictures/AdobeStock_211504196_Preview.jpeg)
+    /* background-image: url(/pictures/AdobeStock_211504196_Preview.jpeg) */
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap");
@@ -29,7 +29,11 @@ body {
 /*header and navbar*/
 
 header {
-    margin: 20px 10px 0;
+   
+    background-image: url(/pictures/background-wall.jpeg);
+    width: 100%;
+    height: 500px;
+    object-fit:fill;
     
 }
 
@@ -87,6 +91,7 @@ header {
     align-items: center;
     width: 80%;
     margin: auto;
+
 }
 
 .nav-menu {
@@ -229,7 +234,7 @@ ul {
     border-radius: 15px;
     margin-bottom: 60px;
     height: 50px;
-    width: 200px;
+   
 }
 /*social media*/ 
 .social-media-links {
@@ -242,6 +247,9 @@ ul {
 /*project*/ 
 .h2-my-projects{
     background-color: rgb(58, 86, 109);
+    font-size: 50px;
+    height: 70px;
+    text-align: center;
 }
 
 .my-projects-text{
@@ -257,16 +265,14 @@ background-color: none;
 /*Reiny days*/ 
 .border-around-project-div{
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
     border-top: 2px solid rgb(97, 155, 97);
     height: 400px;
     text-align: center;
-   
+}
 
-}
-.rainy-days-img-frontpage{
-    width: 200px;
-}
+
+
 
 .div-rainy-days-text-frontpage{
     display: flex;
@@ -275,6 +281,16 @@ background-color: none;
 
 .rainy-days-p-frontpage{
     width: 200px;
+}
+
+.read-more-projects{
+text-align: center;
+}
+
+.flex-read-more-projects{
+display: flex;
+justify-content: center;
+width: 100%;
 }
 
 /*Posts-homepage*/
@@ -306,6 +322,16 @@ background-color: none;
     font-size: 20px;
     padding: 30px;
   }
+
+
+
+
+
+/*About*/
+
+
+
+
 
 /* .social-media-icons {} */
 
@@ -375,23 +401,27 @@ background-color: none;
 
       /*Reiny days*/ 
 .border-around-project-div{
-    flex-wrap: ;
 width: 100%;
     height: 400px;
     text-align: center;
     border-top: none;
 }
+.project-flex-row{
+    display: flex
+}
 
-.my-projects-text{
-   
-    justify-content: center;
+.post-frontpage{
+    display: flex;
+    width: 800px;
+    justify-content: center
+    ;
+}
+
+.image-card-homepage{
     
 }
 
-.div-around-the-three-projects{
-    display: flex;
-    flex-direction: row;
-}
+
 
 }
 
