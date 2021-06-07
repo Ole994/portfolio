@@ -28,19 +28,11 @@ body {
 
 /*header and navbar*/
 
-header {
-   
-    background-image: url(/pictures/background-wall.jpeg);
-    width: 100%;
-    height: 500px;
-    object-fit:fill;
-    
-}
+
 
 .header-hamburger {
-    /* background-color: #303133; */
+    background-color: #303133;
 }
-
 .navbar-hamburger {
     display: flex;
     justify-content: space-between;
@@ -63,9 +55,8 @@ header {
 }
 
 .nav-menu {
-    top: 0;
     display: flex;
-    justify-content: space-between;
+    
     align-items: center;
     height: 20vh;
 }
@@ -150,13 +141,10 @@ a {
 
 .hamburger-links {
     margin-top: 20px;
-    height: 700px;
     display: flex;
     flex-direction: column;
-
-
     align-items: center;
-    font-size: 40px;
+    
 }
 
 .display-none {
@@ -233,17 +221,37 @@ ul {
     background-color: rgb(94, 185, 94);
     border-radius: 15px;
     margin-bottom: 60px;
-    height: 50px;
-   
+    height: 50px;  
 }
-/*social media*/ 
-.social-media-links {
+
+
+.h1-project1{
+    background-image: url(/pictures/background-project1.jpeg); 
+}
+
+.h2-flex{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
-    height: 30px;
-    margin: 40px;
+    text-align: center;
+    margin: 30px;
 }
+
+
+
+
+
+
+
+
+/*social media*/ 
+
+   
+
+.social-media-size{
+font-size: 20px;
+} 
+
 /*project*/ 
 .h2-my-projects{
     background-color: rgb(58, 86, 109);
@@ -270,8 +278,6 @@ background-color: none;
     height: 400px;
     text-align: center;
 }
-
-
 
 
 .div-rainy-days-text-frontpage{
@@ -324,27 +330,63 @@ width: 100%;
   }
 
 
+  .images-museum{
+      width: 100%;
+      border: 4px solid rgb(110, 153, 173);
+  }
+  .images-projects{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    height: 1000px;
+    margin-left: 5px;
+    margin-right: 12px;
+  }
 
 
 
 /*About*/
 
 
+/*post*/
 
 
+.post-image{
+    display: flex;
+    justify-content: center;
+}
 
-/* .social-media-icons {} */
+.img-cards-single-post-post-page{
+    width: 300px;
+    border-radius: 20px;
+    border: 2px solid rgb(142, 218, 142); 
+}
+
+.post-p-post-page{
+    font-size: 20px;
+}
 
 /*Desktop big*/
 @media (min-width: 1200px) {
-    header {
-        max-width: 100%;
-    }
-
+  
     .profile-img-homepage {
         width: 40vh;
         border-radius: 10px;
         height: 40vh;
+    }
+
+    .images-museum{
+        width: 500px;
+        width: 1000px;
+        border: 4px solid rgb(110, 153, 173);
+    }
+    .images-projects{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      height: 2000px;
+      margin-left: 5px;
+      margin-right: 12px;
     }
 
 }
@@ -356,6 +398,11 @@ width: 100%;
         border-radius: 10px;
         height: 40vh;
 }
+
+.h2-flex{
+    
+    margin: 70px;
+    width: 700px;
 
 }
 
@@ -413,28 +460,6 @@ width: 100%;
 .post-frontpage{
     display: flex;
     width: 800px;
-    justify-content: center
-    ;
+    justify-content: center;
+} 
 }
-
-.image-card-homepage{
-    
-}
-
-
-
-}
-
-
-
-
-
-  
-  
-  
- 
-  
-  
-  
-  
-  

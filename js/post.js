@@ -46,6 +46,6 @@ const renderPost = (post) => {
     modalDiv.style.display = "flex";
 
     let largeImageUrl = post._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url;
-    modalImg.setAttribute("src", largeImageUrl)
+    
   })
 }
