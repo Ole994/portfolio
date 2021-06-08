@@ -41,7 +41,7 @@ body {
 }
 
 .hamburger {
-    display: none;
+    margin-right: 25px
 }
 
 .bar {
@@ -147,9 +147,7 @@ a {
     
 }
 
-.display-none {
-    display: none;
-}
+
 
 .nav-menu.active {
     transform: translateX(0%);
@@ -193,12 +191,10 @@ ul {
  
  /*Profile image*/ 
 .ole-prof-picture-homepage-flex {
-
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
-    
 }
 
 .profile-img-homepage {
@@ -211,17 +207,33 @@ ul {
 .p-about-me-homepage {
     margin-top: 20px;
     margin-bottom: 15px;
-    margin-left: 40px;
-    margin-right: 20px;
+    font-size: 25px;
+    width: 100%;
     color: wheat;
+    display: flex;
+    flex-direction: column;
 }
 
+.p-read-more-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+}
+
+
+.read-more-button-div{
+    display: flex;
+    align-items:  center;
+    width: 100%;
+}
 .read-more-button{
     color: white;
     background-color: rgb(94, 185, 94);
     border-radius: 15px;
     margin-bottom: 60px;
     height: 50px;  
+    width: 100%;
 }
 
 
@@ -237,11 +249,13 @@ ul {
     margin: 30px;
 }
 
+.read-more-button-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100px;
 
-
-
-
-
+}
 
 
 /*social media*/ 
@@ -249,8 +263,15 @@ ul {
    
 
 .social-media-size{
-font-size: 20px;
+font-size: 16px;
 } 
+
+.social-media-links{
+width: 40%;
+display: flex;
+justify-content: space-between;
+
+}
 
 /*project*/ 
 .h2-my-projects{
@@ -263,6 +284,7 @@ font-size: 20px;
 .my-projects-text{
     display: flex;
     justify-content: center;
+    padding-bottom: 40px;
 }
 
 /*prosjekt*/ 
@@ -362,9 +384,14 @@ width: 100%;
     border: 2px solid rgb(142, 218, 142); 
 }
 
-.post-p-post-page{
-    font-size: 20px;
+.post-text-post-page  {
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
 }
+
+
+    
 
 /*Desktop big*/
 @media (min-width: 1200px) {
@@ -416,35 +443,50 @@ width: 100%;
         background-color: none;
     }
     .logo-picture {
-        width: 300px;
+        width: 100px;
     }
 
     .p-about-me-homepage {
+        flex-direction: column;
         margin-top: 20px;
         font-size: 30px;
         width: 30%;
     }
     .ole-prof-picture-homepage-flex {
-
-        display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 70px;
+        flex-direction: row;
+
         
+        margin-top: 70px;
         margin-right: 10px;
         margin-left: 20px;
     }
+
     .post-frontpage {
         display: flex;
         text-align: center;
         flex-direction: row;
         margin-left: 2px;
         margin-right: 2px;
+        justify-content: space-between;
+        width: 100%;
       }
+
+      .post-frontpage :nth-child(2){
+          margin: 20px 20px 0 20px;
+      }
+
+
+      .image-card-homepage{
+          width: 0px;
+          padding: 40px;
+      } 
       .nav-column{
           display: flex;
           flex-direction: column;
       }
+
 
       /*Reiny days*/ 
 .border-around-project-div{
@@ -453,13 +495,13 @@ width: 100%;
     text-align: center;
     border-top: none;
 }
+
 .project-flex-row{
     display: flex
 }
 
-.post-frontpage{
-    display: flex;
-    width: 800px;
-    justify-content: center;
+
+    
+    
 } 
 }
