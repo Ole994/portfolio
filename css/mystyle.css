@@ -372,6 +372,7 @@ width: 100%;
 .post-image{
     display: flex;
     justify-content: center;
+    
     object-fit: cover;
 }
 
@@ -379,6 +380,7 @@ width: 100%;
     width: 300px;
     border-radius: 20px;
     border: 2px solid rgb(142, 218, 142); 
+    object-fit: cover;
 }
 
 .post-text-post-page  {
