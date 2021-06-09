@@ -3,10 +3,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Amiri&family=Dancing+Script&family=Indie+Flower&family=Kdam+Thmor&family=Pattaya&display=swap");
 body {
     position: relative;
-    margin: 0px;
+    margin: 2px;
     padding: 0;
     box-sizing: border-box;
-    background-color: #303336;
+    background-color: #657468;
     color: white;
     text-decoration: none;
     font-family: "Amiri", serif;
@@ -334,6 +334,7 @@ width: 100%;
   .images-projects{
       width: 100%;
       border: 4px solid rgb(128, 224, 136);
+      margin: auto;
   }
   .images-projects-div{
       display: flex;
@@ -380,7 +381,7 @@ width: 100%;
 }
 
 .post-text-post-page  {
-    font-size: 25px;
+    font-size: 16px;
     display: flex;
     justify-content: center;
 }
@@ -464,6 +465,11 @@ justify-content: space-around;
 
 @media (min-width: 480px){
 
+    .profile-img-homepage {
+        width: 70% ;
+        height: 500px;
+    }
+
     /*About > 480px*/
     .h1-about-background-img{
     width: 100%;
@@ -491,7 +497,10 @@ justify-content: space-around;
         width: 100%;
         height: 900px;
         }  */
-    
+        .profile-img-homepage {
+            width: 500px;
+            
+        }
         .about-me-text-p{
             font-size: 25px;
             width: 700px;
@@ -501,7 +510,10 @@ justify-content: space-around;
 
 
 @media (min-width: 994px) {
-    
+    .about-me-text-p{
+        font-size: 25px;
+        width: 700px;
+    }
     .about-me-text-p{
         font-size: 25px;
         width: 500px;
@@ -521,18 +533,13 @@ justify-content: space-around;
     }
 
     .p-about-me-homepage {
-        flex-direction: column;
-        margin-top: 20px;
-        font-size: 30px;
-        height: 600px;
-        width: 50%;
+        
     }
 
     .p-read-more-div{
         margin-top: 75px;
         width: 40%;
-        height: 700px;    
-        
+   
     }
 
     .ole-prof-picture-homepage-flex {
@@ -540,14 +547,9 @@ justify-content: space-around;
         align-items: center;
         flex-direction: row;
          }
-        .profile-img-homepage {
-        width: 500px;
-        border-radius: 10px;
-        height: 400px;
-        margin-top: 70px;
-        margin-right: 10px;
-        margin-left: 20px;
-    }
+
+
+        
 
     .post-frontpage {
         display: flex;
@@ -620,7 +622,7 @@ width: 100%;
     .images-projects{
         width: 500px;
         width: 1000px;
-        border: 4px solid rgb(110, 153, 173);
+       
     }
     .images-projects-div{
         display: flex;
