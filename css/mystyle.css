@@ -6,7 +6,7 @@ body {
     margin: 2px;
     padding: 0;
     box-sizing: border-box;
-    background-color: #657468;
+    background-color: #586947;
     color: white;
     text-decoration: none;
     font-family: "Amiri", serif;
@@ -372,6 +372,7 @@ width: 100%;
 .post-image{
     display: flex;
     justify-content: center;
+    object-fit: cover;
 }
 
 .img-cards-single-post-post-page{
