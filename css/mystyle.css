@@ -290,6 +290,7 @@ justify-content: space-between;
 .div-rainy-days-text-frontpage{
     display: flex;
     justify-content: center;
+    
 }
 
 .rainy-days-p-frontpage{
@@ -526,7 +527,7 @@ justify-content: space-around;
 
 
         .post-p-post-page{
-        width: 2px;
+        
 
 
         }
