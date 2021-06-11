@@ -273,6 +273,23 @@ justify-content: space-between;
     padding-bottom: 40px;
     align-items: center;
 }
+.netlify-links-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    width: 20%;
+    margin-bottom: 33px;
+    box-shadow: rgba(230, 215, 215, 0.25) 0px 54px 55px,
+                rgba(165, 154, 154, 0.12) 0px -12px 30px,
+                rgba(255, 255, 255, 0.12) 0px 4px 6px,
+                rgba(255, 255, 255, 0.17) 0px 12px 13px,
+                rgba(243, 243, 243, 0.09) 0px -3px 5px;
+}
+
+.p-link{
+    font-size: large;
+}
 
 
 
@@ -495,7 +512,11 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+   
     
+}
+.footer-div{
+   
 }
 
 .footer-p{
