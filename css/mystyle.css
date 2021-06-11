@@ -381,7 +381,11 @@ width: 100%;
 .post-image{
     display: flex;
     justify-content: center;
-    
+    object-fit: cover;
+}
+.post-image{
+    display: flex;
+    justify-content: center;
     object-fit: cover;
 }
 
@@ -390,6 +394,7 @@ width: 100%;
     border-radius: 20px;
     border: 2px solid rgb(142, 218, 142); 
     object-fit: cover;
+    height: 200px;
 }
 
 .post-text-post-page  {
@@ -496,14 +501,12 @@ justify-content: space-around;
 
 /*Projects >480px*/
 
-.images-projects-div{
 
-}
 .images-projects{
 
     width: 500px;
 
-}
+}}
 
 
 @media (min-width: 800px){
@@ -521,13 +524,6 @@ justify-content: space-around;
         }
         .img-cards-single-post-post-page{
             width: 800px;
-        }
-
-
-        .post-p-post-page{
-        
-
-
         }
     }
 
@@ -556,9 +552,7 @@ justify-content: space-around;
         width: 100px;
     }
 
-    .p-about-me-homepage {
-        
-    }
+ 
 
     .p-read-more-div{
         margin-top: 75px;
@@ -611,9 +605,6 @@ width: 100%;
 }
 
 .h1-about-background-img{
-    
-  
-  
     text-align: center;
     width: 40%;
     height: 900px;
@@ -630,9 +621,6 @@ width: 100%;
         
     }
 
-    .about-me-text-div{
-    }
-
     .read-more-button-div{
     width: 100%;
 
@@ -646,6 +634,18 @@ width: 100%;
 
     .h2-flex{
         width: 40%;
+    }
+
+    .post-image{
+        display: flex;
+        justify-content: center;
+        object-fit: cover;
+    }
+    .img-cards-single-post-post-page{
+        width: 300px;
+        border-radius: 20px;
+        border: 2px solid rgb(142, 218, 142); 
+        object-fit: cover;
     }
 
 
@@ -669,4 +669,4 @@ width: 100%;
       margin-left: 5px;
       margin-right: 12px;
     }
-    }
+}
