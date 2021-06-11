@@ -1,4 +1,3 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Amiri&family=Dancing+Script&family=Indie+Flower&family=Kdam+Thmor&family=Pattaya&display=swap");
 body {
@@ -11,7 +10,10 @@ body {
     text-decoration: none;
     font-family: "Amiri", serif;
     font-size: 16px;
-    
+}
+
+p{
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif'
 }
 
 /*header and navbar*/
@@ -131,8 +133,6 @@ a {
     
 }
 
-
-
 .nav-menu.active {
     transform: translateX(0%);
 }
@@ -203,10 +203,7 @@ ul {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    
-
 }
-
 
 .read-more-button-div{
     display: flex;
@@ -214,17 +211,43 @@ ul {
     width: 100%;
     flex-direction: column;
     justify-content: center;
+    
 }
 .read-more-button{
     color: white;
     background-color: rgb(94, 185, 94);
+    box-shadow: rgba(230, 215, 215, 0.25) 0px 54px 55px,
+                rgba(165, 154, 154, 0.12) 0px -12px 30px,
+                rgba(0, 0, 0, 0.12) 0px 4px 6px,
+                rgba(0, 0, 0, 0.17) 0px 12px 13px,
+                rgba(255, 255, 255, 0.09) 0px -3px 5px;
     border-radius: 15px;
-    margin-bottom: 60px;
+
     height: 30px;  
     width: 40%;
     text-align: center;
 }
 
+/*social media*/    
+
+.social-media-size{
+font-size: 16px;
+} 
+
+.social-media-links{
+width: 40%;
+display: flex;
+justify-content: space-between;
+
+}
+
+/*project*/ 
+.h2-my-projects{
+    font-size: 50px;
+    
+    text-align: center;
+    
+}
 
 .h2-flex{
     display: flex;
@@ -241,44 +264,12 @@ ul {
     text-align: center;
 }
 
-
-
-
-/*social media*/ 
-
-   
-
-.social-media-size{
-font-size: 16px;
-} 
-
-.social-media-links{
-width: 40%;
-display: flex;
-justify-content: space-between;
-
-}
-
-/*project*/ 
-.h2-my-projects{
-    font-size: 50px;
-    height: 90px;
-    text-align: center;
-    
-}
-
-.my-projects-text{
-    display: flex;
-    justify-content: center;
-    padding-bottom: 40px;
-    align-items: center;
-}
 .netlify-links-div{
     display: flex;
     flex-direction: column;
     align-items: center;
     
-    width: 20%;
+    
     margin-bottom: 33px;
     box-shadow: rgba(230, 215, 215, 0.25) 0px 54px 55px,
                 rgba(165, 154, 154, 0.12) 0px -12px 30px,
@@ -291,33 +282,51 @@ justify-content: space-between;
     font-size: large;
 }
 
+/*prosjekt no queries*/
+.container-frontpage-projects{
+    box-shadow: rgba(230, 215, 215, 0.25) 0px 54px 55px,
+    rgba(165, 154, 154, 0.12) 0px -12px 30px,
+    rgba(255, 255, 255, 0.12) 0px 4px 6px,
+    rgba(255, 255, 255, 0.17) 0px 12px 13px,
+    rgba(243, 243, 243, 0.09) 0px -3px 5px;
+}
 
-
-/*prosjekt*/ 
-
-
-/*Reiny days no queries*/ 
-.border-around-project-div{
+.h3-flex-div{
     display: flex;
-    flex-direction:column;
-    border-top: 2px solid rgb(97, 155, 97);
-    height: 400px;
-    text-align: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
 
+.h3-projects-frontpage{
+    color: rgb(112, 196, 112);
+    box-shadow: rgba(230, 215, 215, 0.25) 0px 54px 55px,
+                rgba(165, 154, 154, 0.12) 0px -12px 30px,
+                rgba(255, 255, 255, 0.12) 0px 4px 6px,
+                rgba(255, 255, 255, 0.17) 0px 12px 13px,
+                rgba(243, 243, 243, 0.09) 0px -3px 5px;
 }
 
 
-.div-rainy-days-text-frontpage{
+.projects-frontpage-div{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
-.rainy-days-p-frontpage{
-    width: 200px;
+.projects-frontpage-text{
+width: 40%;
+letter-spacing: 2px;
+border-bottom: 0.1px solid rgb(181, 224, 181);
+line-height: normal;
+
+
 }
 
 .read-more-projects{
-text-align: center;
+    font-size: 25px;
+    background-color: rgb(39, 73, 57);
+    margin-bottom: 40px;    
 }
 
 .flex-read-more-projects{
@@ -364,10 +373,13 @@ width: 100%;
                 rgba(255, 255, 255, 0.17) 0px 12px 13px,
                 rgba(243, 243, 243, 0.09) 0px -3px 5px;
   }
+
+  .img-card-url{
+      border-radius: 4px;
+  }
   .p-image-card-homepage {
     text-align: left;
     font-size: 20px;
-    padding: 30px;
   }
 
 
@@ -392,10 +404,7 @@ width: 100%;
     margin-right: 12px;
   }
 
-
-
 /*About no queries*/
-
 
 .h1-about-background-img{
     background-image: url(/pictures/profil-bilde-portofolio.jpg);
@@ -443,7 +452,6 @@ width: 100%;
 .hr-0-margin{
     margin: 0;
 }
-
 
 /*About-page*/
 .web-developer, .h1-about-page{
@@ -518,10 +526,12 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0;
    
     
 }
 .footer-div{
+    width: 100%;
    
 }
 
@@ -542,22 +552,17 @@ footer{
     height: 700px;
     }
 
-
 .about-me-text-p{
     font-size: 25px;
     width: 460px;
 }
 
-
 /*Projects >480px*/
-
 
 .images-projects{
 
     width: 500px;
-
 }}
-
 
 @media (min-width: 800px){
     /* .h1-about-background-img{
@@ -576,13 +581,8 @@ footer{
             width: 800px;
             height: 300px;
         }
-
-        
-
-        
+   
     }
-
-
 
 @media (min-width: 994px) {
     .about-me-text-p{
@@ -598,7 +598,6 @@ footer{
         font-size: 50px;
     }
     
-
     .nav-column{
           display: flex;
           flex-direction: column;
@@ -606,8 +605,6 @@ footer{
     .logo-picture {
         width: 100px;
     }
-
- 
 
     .p-read-more-div{
         margin-top: 75px;
@@ -620,11 +617,6 @@ footer{
         align-items: center;
         flex-direction: row;
          }
-
-         .read-more-projects{
-            font-size: 30px;
-            }
-        
 
     .post-frontpage {
         display: flex;
@@ -639,25 +631,6 @@ footer{
       .post-frontpage :nth-child(2){
           margin: 20px 20px 0 20px;
       }
-
-      .image-card-homepage{
-          width: 0px;
-          padding: 40px;
-      } 
-
-      /*Reiny days*/ 
-.border-around-project-div{
-width: 100%;
-    height: 400px;
-    text-align: center;
-    border-top: none;
-}
-
-.project-flex-row{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
 .h1-about-background-img{
     text-align: center;
@@ -677,14 +650,15 @@ width: 100%;
     }
 
     .read-more-button-div{
-    width: 100%;
-
         
+    width: 100%;
+   
     }
     .read-more-button{
         justify-content: center;
         width: 100%;
        height: 70px;
+       
     }
 
     .h2-flex{
@@ -702,27 +676,19 @@ width: 100%;
         border: 2px solid rgb(142, 218, 142); 
         object-fit: cover;
     }
-
-
 }
-
 
 /*Desktop big*/
 @media (min-width: 1200px) {
 
-
     .images-projects{
-        width: 700px;
-       
-       
+        width: 700px;       
     }
     .images-projects-div{
-       
         flex-direction: column;
         justify-content: space-between;
-        
-      margin-left: 5px;
-      margin-right: 12px;
+        margin-left: 5px;
+        margin-right: 12px;
     }
     
 }

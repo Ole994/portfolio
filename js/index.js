@@ -2,8 +2,7 @@ const url = "https://olekorvald.no/wp-json/wp/v2/posts?_embed=wp:featuredmedia&p
 
 // HTML Dom elementer. 
 const postFrontpage = document.querySelector(".post-frontpage");
-const carouselButtonPrevious = document.querySelector(".prev-button");
-const carouselButtonNext = document.querySelector(".next-button");
+
 const loading = document.querySelector(".loading");
 
 // Dette er tilstand som vi bruker. F.eks. lagrer vi alle postene i posts, og 

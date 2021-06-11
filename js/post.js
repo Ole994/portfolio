@@ -5,11 +5,8 @@ const spinner = document.querySelector(".lds-spinner");
 const url = `https://olekorvald.no/wp-json/wp/v2/posts/${id}?_embed`
 const postContent = document.querySelector(".post-content-post-page")
 const loading = document.querySelector(".loading");
-const modalDiv = document.querySelector(".image-modal-div");
-const closeButton = document.querySelector(".close-button-modal");
-closeButton.addEventListener("click", () => {
-  modalDiv.style.display = "none";
-})
+
+
 fetch(url, {
   "method": "GET"
 })
@@ -40,12 +37,6 @@ const renderPost = (post) => {
   postContent.innerHTML += htmlString;
   const postImage = document.querySelector(".img-cards-single-post-post-page")
   console.log(postImage)
-  const modalImg = document.querySelector(".modal-img")
-
-  postImage.addEventListener("click", () => {
-    modalDiv.style.display = "flex";
-
-    let largeImageUrl = post._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url;
+  }
     
-  })
-}
+  
